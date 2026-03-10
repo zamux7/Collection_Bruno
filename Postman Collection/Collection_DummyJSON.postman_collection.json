@@ -1,0 +1,591 @@
+{
+	"info": {
+		"_postman_id": "1637ce70-e185-448e-8bf8-22b40fdef4f5",
+		"name": "Collection_DummyJSON",
+		"description": "# Collection_DummyJSON\n\n  \nEsta es una colección con algunos endpoints de [https://dummyjson.com/](https://dummyjson.com/) a efectos de práctica en API/HTTP clients alternativos a Postman.\n\n_Dato curioso: Fue hecha originalmente en Postman_ 😅",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40376393"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Alta usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Mariana\",\r\n    \"lastName\": \"Pérez\",\r\n    \"maidenName\": \"González\",\r\n    \"age\": 35,\r\n    \"gender\": \"Femenino\",\r\n    \"email\": \"mariana.perez@example.com\",\r\n    \"phone\": \"+54 9 11 1234-5678\",\r\n    \"username\": \"marianaperez35\",\r\n    \"password\": \"contraseñaSegura123\",\r\n    \"birthDate\": \"1989-06-15\",\r\n    \"image\": \"https://example.com/marianaperez.jpg\",\r\n    \"bloodGroup\": \"O+\",\r\n    \"height\": 1.65,\r\n    \"weight\": 60,\r\n    \"eyeColor\": \"Marrón\",\r\n    \"hair\": {\r\n        \"color\": \"Castaño\",\r\n        \"type\": \"Lacio\"\r\n    },\r\n    \"domain\": \"marianaperez.com.ar\",\r\n    \"ip\": \"190.45.67.89\",\r\n    \"address\": {\r\n        \"address\": \"Avenida Corrientes 1234\",\r\n        \"city\": \"Buenos Aires\",\r\n        \"coordinates\": {\r\n            \"lat\": -34.6037,\r\n            \"lng\": -58.3816\r\n        },\r\n        \"postalCode\": \"C1043\",\r\n        \"state\": \"Ciudad Autónoma de Buenos Aires\"\r\n    },\r\n    \"macAddress\": \"00:14:22:01:23:45\",\r\n    \"university\": \"Universidad de Buenos Aires\",\r\n    \"bank\": {\r\n        \"cardExpire\": \"12/26\",\r\n        \"cardNumber\": \"4502 1234 5678 9101\",\r\n        \"cardType\": \"Visa\",\r\n        \"currency\": \"ARS\",\r\n        \"iban\": \"AR1234567890123456789101234\"\r\n    },\r\n    \"company\": {\r\n        \"address\": {\r\n            \"address\": \"Calle Falsa 456\",\r\n            \"city\": \"La Plata\",\r\n            \"coordinates\": {\r\n                \"lat\": -34.9206,\r\n                \"lng\": -57.9569\r\n            },\r\n            \"postalCode\": \"B1900\",\r\n            \"state\": \"Buenos Aires\"\r\n        },\r\n        \"department\": \"Tecnología\",\r\n        \"name\": \"Tech Solutions SA\",\r\n        \"title\": \"Desarrolladora Senior\"\r\n    },\r\n    \"ein\": \"20-12345678-9\",\r\n    \"ssn\": \"20-34567890-1\",\r\n    \"userAgent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/users/add",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"users",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edición usuario",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pruebita@api.com\",\r\n    \"phone\": \"+59 114-787-9970\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/users/2",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Baja usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"pruebita@api.com\",\r\n    \"phone\": \"+59 114-787-9970\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/users/2",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recetas",
+			"item": [
+				{
+					"name": "Listado receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/recipes",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtro receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/recipes/search?q=Margherita",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"recipes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Margherita"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paginado receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/recipes?limit=20&skip=5&select=name,image,difficulty,cuisine",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"recipes"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "skip",
+									"value": "5"
+								},
+								{
+									"key": "select",
+									"value": "name,image,difficulty,cuisine"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordenar receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/recipes?sortBy=title&order=desc",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"recipes"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "title"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categorias receta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/recipes/tags",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"recipes",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emilys\",\r\n    \"password\": \"emilyspass\",\r\n    \"expiresInMins\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzQ3MzgzNjcsImV4cCI6MTczNDc0MDE2N30.iwVw97Jc_mezH9mp1COp-3eSG6p8Wy0v1tVrr-pjTVU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/auth/me",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refrescar token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzQ3Mzg0NzQsImV4cCI6MTczNzMzMDQ3NH0.XEZZoX4dOILHVbuKlX8u-ucvQ3rBw2OyuHoBPGIvMmI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/auth/me",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Codigos de estado erróneos",
+			"item": [
+				{
+					"name": "400 EsteEsUnBadRequest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emilys\",\r\n    \"password\": \"emilyspass\",\r\n    \"expiresInMins\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/http/400/EsteEsUnBadRequest",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"http",
+								"400",
+								"EsteEsUnBadRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "404 NotFound",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emilys\",\r\n    \"password\": \"emilyspass\",\r\n    \"expiresInMins\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/http/404/EsteEsUnNotFound",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"http",
+								"404",
+								"EsteEsUnNotFound"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "500 InternalServerError",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emilys\",\r\n    \"password\": \"emilyspass\",\r\n    \"expiresInMins\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/http/999/EsteEsUnInternalServerError",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"http",
+								"999",
+								"EsteEsUnInternalServerError"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "503 ServiceUnavailable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"emilys\",\r\n    \"password\": \"emilyspass\",\r\n    \"expiresInMins\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/http/503/EsteEsUnServiceUnavailable",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"http",
+								"503",
+								"EsteEsUnServiceUnavailable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Imagenes",
+			"item": [
+				{
+					"name": "Generar cuadrado",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/image/150",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"image",
+								"150"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar rect. (color)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/image/400x200/282757",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"image",
+								"400x200",
+								"282757"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar rect. (color+texto)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/image/400x200/282828?fontFamily=pacifico&text=I+am+a+pacifico+font",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"image",
+								"400x200",
+								"282828"
+							],
+							"query": [
+								{
+									"key": "fontFamily",
+									"value": "pacifico"
+								},
+								{
+									"key": "text",
+									"value": "I+am+a+pacifico+font"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generar icono",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/icon/abcd1234/200",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"icon",
+								"abcd1234",
+								"200"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GraphQL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  products{\r\n\t\tid\r\n    title\r\n    price\r\n\t\tdescription\r\n\t\timages\r\n\t\tcategory {\r\n\t\t\tid\r\n\t\t\tname\r\n\t\t\timage\r\n\t\t}\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://api.escuelajs.co/graphql",
+					"protocol": "https",
+					"host": [
+						"api",
+						"escuelajs",
+						"co"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
